@@ -6,7 +6,7 @@
      <h2>introduction</h2>
      <p><%= @user.introduction %></p>
 
-     <%= link_to edit__path(current_user.id), :method => :get do %>
+     <%= link_to edit_user_path(current_user.id), :method => :get do %>
      <i class="fas fa-user-cog"></i>
      <% end %>
      
