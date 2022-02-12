@@ -1,3 +1,11 @@
+ <% if flash[:error].present? %>
+  <%= flash[:error].count %>error prohibited this obj from being saved:
+  <ul>
+    <% flash[:error].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= render 'list', book: @book %>
 
