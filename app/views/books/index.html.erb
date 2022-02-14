@@ -7,6 +7,7 @@
   </ul>
 <% end %>
 
+<main>
 <%= render 'list', book: @book %>
 
 <div class="col-md-8 offset-md-1">
@@ -24,13 +25,16 @@
    <tbody>
     <tr>
      <td>
-      <%= link_to user_path(current_user.id) do %>
-      <%= image_tag book.user.get_profile_image(100,100) %>
+      <%= link_to user_path(book.user.id) do %>
+      <%= image_tag book.user.get_profile_image(40,40) %>
       <% end %>
      </td>
-     <td><%= link_to book.title, book_path(book) %></td>
+     <td><%= link_to book.title, book_path(book.id) %> </td>
      <td><%= book.body %></td>
     </tbody>
     <% end %>
  </table>
 </div>
+</div>
+</div>
+</main>
